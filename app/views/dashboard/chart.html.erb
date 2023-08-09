@@ -1,0 +1,13 @@
+<%=
+content_tag(:div, {
+  data: {
+    controller: "temperatures",
+    temperatures_url_value: chart_data_url,
+    temperatures_refresh_interval_value: "3000"
+  }
+}) do
+%>
+  <%= content_tag(:div, { data: { temperatures_target: "chart" } }) do %>
+    Loading...
+  <% end%>
+<% end %>
